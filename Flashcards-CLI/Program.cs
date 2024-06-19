@@ -8,6 +8,8 @@ namespace Flashcards_CLI
         public static bool closeApp = false;
         public static void Main(string[] args)
         {
+            Database.CreateDatabase();
+            Database.InitializeTables();
             while (!closeApp)
             {
                 AnsiConsole.Write(new FigletText("Main menu").Color(Color.Green));

@@ -50,7 +50,7 @@ namespace Flashcards_CLI
 
                     if (count == 0)
                     {
-                        string tableCommand = "CREATE TABLE Stacks (Id INTEGER Primary Key, Name TEXT)";
+                        string tableCommand = "CREATE TABLE Stacks (Id INTEGER IDENTITY(1,1) Primary Key, Name NVARCHAR(50))";
                         SqlCommand createTable = new SqlCommand(tableCommand, db);
                         createTable.ExecuteNonQuery();
                         Console.WriteLine("Table created");
