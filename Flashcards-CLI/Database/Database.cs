@@ -74,7 +74,7 @@ namespace Flashcards_CLI
 
                     if (count == 0)
                     {
-                        string tableCommand = "CREATE TABLE Flashcards (Id INTEGER Primary Key, Front TEXT, Back TEXT, Stack_Id INTEGER, FOREIGN KEY (Stack_Id) REFERENCES Stacks(Id))";
+                        string tableCommand = "CREATE TABLE Flashcards (Id INTEGER IDENTITY(1,1) Primary Key, Front TEXT, Back TEXT, Stack_Id INTEGER, FOREIGN KEY (Stack_Id) REFERENCES Stacks(Id))";
                         SqlCommand createTable = new SqlCommand(tableCommand, db);
                         createTable.ExecuteNonQuery();
                         Console.WriteLine("Table created");
