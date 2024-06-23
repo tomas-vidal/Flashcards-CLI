@@ -1,4 +1,4 @@
-namespace Flashcards_CLI.Models 
+namespace Flashcards_CLI 
 {
     internal class FlashcardModel 
     {
