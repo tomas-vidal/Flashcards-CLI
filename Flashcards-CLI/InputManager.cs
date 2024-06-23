@@ -1,6 +1,5 @@
 ﻿using Spectre.Console;
 
-
 namespace Flashcards_CLI
 {
     internal class InputManager
@@ -24,6 +23,12 @@ namespace Flashcards_CLI
                     break;
                 case "1":
                     StacksManager.StacksMenu();
+                    break;
+                case "2":
+                    StudySessionsManager.StudyMenu();
+                    break;
+                case "3":
+                    StudySessionsManager.ShowHistory();
                     break;
                 default:
                     break;

@@ -79,5 +79,31 @@ namespace Flashcards_CLI.Helpers
                 return new StackModel{Id = 0, Name = "INVALID"};
             }
         }
+
+        internal static StackModel GetStackById(int inputId)
+        {
+            using (SqlConnection db = new SqlConnection($"Server=(LocalDb)\\{dbName};Database=DatabaseFlashcards;Integrated Security=true"))
+            {
+                try
+                {
+                    db.Open();
+                    string command = $"SELECT * FROM Stacks WHERE Id = '{inputId}'";
+                    SqlCommand cmd = new SqlCommand(command, db);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0); 
+                        string name = reader.GetString(1);    
+
+                        return new StackModel{Id = id, Name = name };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                return new StackModel{Id = 0, Name = "INVALID"};
+            }
+        }
     }
 }

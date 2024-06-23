@@ -7,7 +7,7 @@ namespace Flashcards_CLI
     {
         public int Id {get; set;}
         public DateTime Date {get; set;}
-        public int Score {get; set;}
+        public double Score {get; set;}
         public int Stack_Id {get; set;}
     }
 }

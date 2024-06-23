@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flashcards-CLI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01baadc4274e0cc4b795e046acfe74d3878a2614")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b4e528daf2301b468a5637ce2d405d61b179a8b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flashcards-CLI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flashcards-CLI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

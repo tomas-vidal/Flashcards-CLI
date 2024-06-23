@@ -8,9 +8,12 @@ namespace Flashcards_CLI
         internal static void StacksMenu()
         {
             var table = new Table();
-            table.AddColumn("Stacks");
-            table.AddRow("test1");
-            table.AddRow("Cards");
+            table.AddColumn("Current Stacks");
+            List<StackModel> AllStacks = StacksHelpers.GetStacks();
+            foreach(StackModel stack in AllStacks)
+            {
+                table.AddRow(stack.Name);
+            }
             AnsiConsole.Write(new FigletText("Stacks menu").Color(Color.Green));
             AnsiConsole.Write(table);
             AnsiConsole.Markup("\t[red]0 - Type 0 to go back to main menu[/]\n");
@@ -56,7 +59,7 @@ namespace Flashcards_CLI
 
             while (input == "") 
             {
-                AnsiConsole.Markup("[red]Invalid input, please try again...[/]");
+                AnsiConsole.Markup("[red]Invalid input, please try again: [/]");
                 input = Console.ReadLine();
             }
 
